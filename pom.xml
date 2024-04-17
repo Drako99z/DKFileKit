@@ -6,7 +6,9 @@
 
     <groupId>org.arturo</groupId>
     <artifactId>DKFileKit</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
+    <name>DKFileKit</name>
+    <description>Librería para manejar la creación, eliminación, copia y movimiento de archivos, logs y carpetas</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -21,5 +23,13 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Drako99z Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/Projects-Drako99z/DKFileKit</url>
+        </repository>
+    </distributionManagement>
 
 </project>
