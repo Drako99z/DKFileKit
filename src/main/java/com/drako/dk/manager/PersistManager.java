@@ -33,6 +33,16 @@ public class PersistManager extends FileDescriptor {
     }
 
     /**
+     * Crea un nuevo objeto PersistManager con la ruta y el nombre del archivo.
+     *
+     * @param filePath La ruta del archivo.
+     * @param fileName El nombre del archivo.
+     */
+    public PersistManager(Path filePath, String fileName) {
+        super(filePath, fileName);
+    }
+
+    /**
      * Guarda un objeto {@link Serializable} en un archivo binario.
      * Se proporciona un controlador para manejar cualquier excepción que ocurra durante el proceso de guardado.
      *

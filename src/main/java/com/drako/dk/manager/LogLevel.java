@@ -1,4 +1,4 @@
-package com.drako.dk.handler;
+package com.drako.dk.manager;
 
 /**
  * Enumeración que define los diferentes niveles de log.

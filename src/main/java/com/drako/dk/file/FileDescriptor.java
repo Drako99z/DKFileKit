@@ -31,6 +31,16 @@ public class FileDescriptor {
     }
 
     /**
+     * Crea un nuevo objeto FileManager con la ruta y el nombre del archivo.
+     *
+     * @param filePath La ruta del archivo.
+     * @param fileName El nombre del archivo.
+     */
+    public FileDescriptor(Path filePath, String fileName) {
+        this.fileFullPath = filePath.resolve(fileName);
+    }
+
+    /**
      * Obtiene la ruta completa de un archivo a partir de la ruta y el nombre del archivo proporcionados.
      *
      * @param filePath La ruta del archivo.

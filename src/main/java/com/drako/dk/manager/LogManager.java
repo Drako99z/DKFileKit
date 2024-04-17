@@ -1,7 +1,6 @@
 package com.drako.dk.manager;
 
 import com.drako.dk.handler.CompletionHandler;
-import com.drako.dk.handler.LogLevel;
 
 import java.nio.file.Path;
 import java.time.LocalDateTime;
@@ -67,8 +66,8 @@ public class LogManager {
      *
      * @param ex La excepción a registrar.
      */
-    public void log(Exception ex) {
-        log(ex.toString(), LogLevel.ERROR);
+    public boolean log(Exception ex) {
+        return log(ex.toString(), LogLevel.ERROR);
     }
 
     /**
@@ -76,8 +75,8 @@ public class LogManager {
      *
      * @param message El mensaje a registrar.
      */
-    public void log(String message) {
-        log(message, LogLevel.INFO);
+    public boolean log(String message) {
+        return log(message, LogLevel.INFO);
     }
 
     /**
@@ -86,9 +85,9 @@ public class LogManager {
      * @param message El mensaje a registrar.
      * @param level   El nivel de log del mensaje.
      */
-    public void log(String message, LogLevel level) {
+    public boolean log(String message, LogLevel level) {
         String logMessage = getLogMessage(message, level);
-        persistManager.writeTextFile(logMessage, true);
+        return persistManager.writeTextFile(logMessage, true);
     }
 
     /**

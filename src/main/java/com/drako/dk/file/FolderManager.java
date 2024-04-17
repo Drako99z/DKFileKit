@@ -1,4 +1,4 @@
-package com.drako.dk.manager;
+package com.drako.dk.file;
 
 import com.drako.dk.handler.CompletionHandler;
 
@@ -65,5 +65,43 @@ public class FolderManager {
                 onError.accept(e);
         }
         return false;
+    }
+
+    /**
+     * Obtiene la ruta a la carpeta personal del usuario.
+     *
+     * @return La ruta a la carpeta personal del usuario.
+     */
+    public static Path getUserDirectory() {
+        return Path.of(System.getProperty("user.home"));
+    }
+
+    /**
+     * Retorna la ruta completa al elemento especificado dentro de la carpeta personal del usuario.
+     *
+     * @param element El nombre del directorio o archivo dentro de la carpeta personal del usuario.
+     * @return La ruta completa al elemento especificado dentro de la carpeta personal del usuario.
+     */
+    public static Path getUserDirectory(String element) {
+        return getUserDirectory().resolve(element);
+    }
+
+    /**
+     * Obtiene la ruta a la carpeta del directorio de trabajo actual.
+     *
+     * @return La ruta a la carpeta del directorio de trabajo actual.
+     */
+    public static Path getCurrentDirectory() {
+        return Path.of(System.getProperty("user.dir"));
+    }
+
+    /**
+     * Retorna la ruta completa al elemento especificado dentro del directorio de trabajo actual.
+     *
+     * @param element El nombre del directorio o archivo dentro del directorio de trabajo actual.
+     * @return La ruta completa al elemento especificado dentro del directorio de trabajo actual.
+     */
+    public static Path getCurrentDirectory(String element) {
+        return getCurrentDirectory().resolve(element);
     }
 }

@@ -1,8 +1,7 @@
-package com.drako.dk.manager;
+package com.drako.dk.file;
 
 import com.drako.dk.handler.CompletionHandler;
 
-import java.io.IOException;
 import java.nio.file.FileVisitOption;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -29,7 +28,7 @@ public class FileManager {
                 Path targetPath = Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
                 if (onComplete != null)
                     onComplete.onSuccessResult(targetPath);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 if (onComplete != null)
                     onComplete.onError(e);
             }
@@ -49,7 +48,7 @@ public class FileManager {
                 Path targetPath = Files.move(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
                 if (onComplete != null)
                     onComplete.onSuccessResult(targetPath);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 if (onComplete != null)
                     onComplete.onError(e);
             }
@@ -68,7 +67,7 @@ public class FileManager {
                 Files.delete(filePath);
                 if (onComplete != null)
                     onComplete.onSuccessResult(filePath);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 if (onComplete != null)
                     onComplete.onError(e);
             }
@@ -117,7 +116,7 @@ public class FileManager {
                             .forEach(fileList::add);
                 }
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             if(onError != null)
                 onError.accept(e);
         }
