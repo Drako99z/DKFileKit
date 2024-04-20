@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.arturo</groupId>
-    <artifactId>DKFileKit</artifactId>
+    <groupId>com.drako</groupId>
+    <artifactId>dk-file-kit</artifactId>
     <version>1.0</version>
     <name>DKFileKit</name>
     <description>Librería para manejar la creación, eliminación, copia y movimiento de archivos, logs y carpetas</description>
@@ -19,7 +19,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
+            <version>5.10.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -28,7 +28,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Drako99z Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/Projects-Drako99z/DKFileKit</url>
+            <url>https://maven.pkg.github.com/Drako99z/DKFileKit</url>
         </repository>
     </distributionManagement>
 
