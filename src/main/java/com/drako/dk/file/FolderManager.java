@@ -9,6 +9,10 @@ import java.util.Comparator;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
+/**
+ * La clase FolderManager proporciona funcionalidades para la gestión de carpetas, incluyendo operaciones de
+ * crear, eliminar y comprobar su existencia de forma asíncrona.
+ */
 public class FolderManager {
     /**
      * Crea una nueva carpeta en la ruta especificada.

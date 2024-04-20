@@ -65,6 +65,7 @@ public class LogManager {
      * Registra un mensaje de error en el log.
      *
      * @param ex La excepción a registrar.
+     * @return {@code true} si el log se escribió correctamente en el archivo; de lo contrario, {@code false}.
      */
     public boolean log(Exception ex) {
         return log(ex.toString(), LogLevel.ERROR);
@@ -74,6 +75,7 @@ public class LogManager {
      * Registra un mensaje de información en el log.
      *
      * @param message El mensaje a registrar.
+     * @return {@code true} si el log se escribió correctamente en el archivo; de lo contrario, {@code false}.
      */
     public boolean log(String message) {
         return log(message, LogLevel.INFO);
@@ -84,6 +86,7 @@ public class LogManager {
      *
      * @param message El mensaje a registrar.
      * @param level   El nivel de log del mensaje.
+     * @return {@code true} si el log se escribió correctamente en el archivo; de lo contrario, {@code false}.
      */
     public boolean log(String message, LogLevel level) {
         String logMessage = getLogMessage(message, level);
